@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="/static/details.css">
+</head>
+<body>
+<div class="container">
+  <h1>Order Details</h1>
+
+  <div class="field">
+    <span class="label">Order UID:</span>
+    <span class="value">{{.OrderUid}}</span>
+  </div>
+
+  <div class="field">
+    <span class="label">Track Number:</span>
+    <span class="value">{{.TrackNumber}}</span>
+  </div>
+
+  <div class="field">
+    <span class="label">Entry:</span>
+    <span class="value">{{.Entry}}</span>
+  </div>
+
+  <div class="section">
+    <h2>Delivery info:</h2>
+    <div class="field">
+      <span class="label">Name:</span>
+      <span class="value">{{.Delivery.Name}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Phone:</span>
+      <span class="value">{{.Delivery.Phone}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Zip:</span>
+      <span class="value">{{.Delivery.Zip}}</span>
+    </div>
+    <div class="field">
+      <span class="label">City:</span>
+      <span class="value">{{.Delivery.City}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Address:</span>
+      <span class="value">{{.Delivery.Address}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Region:</span>
+      <span class="value">{{.Delivery.Region}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Email:</span>
+      <span class="value">{{.Delivery.Email}}</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Payment info:</h2>
+    <div class="field">
+      <span class="label">Transaction:</span>
+      <span class="value">{{.Payment.Transaction}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Currency:</span>
+      <span class="value">{{.Payment.Currency}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Provider:</span>
+      <span class="value">{{.Payment.Provider}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Amount:</span>
+      <span class="value">{{.Payment.Amount}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Payment Date:</span>
+      <span class="value">{{.Payment.PaymentDT}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Bank:</span>
+      <span class="value">{{.Payment.Bank}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Delivery Cost:</span>
+      <span class="value">{{.Payment.DeliveryCost}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Goods Total:</span>
+      <span class="value">{{.Payment.GoodsTotal}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Custom Fee:</span>
+      <span class="value">{{.Payment.CustomFee}}</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Items info:</h2>
+    {{range .Items}}
+    <div class="field">
+      <span class="label">Item ID:</span>
+      <span class="value">{{.ChrtId}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Track Number:</span>
+      <span class="value">{{.TrackNumber}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Price:</span>
+      <span class="value">{{.Price}}</span>
+    </div>
+    <div class="field">
+      <span class="label">RID:</span>
+      <span class="value">{{.Rid}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Name:</span>
+      <span class="value">{{.Name}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Sale:</span>
+      <span class="value">{{.Sale}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Size:</span>
+      <span class="value">{{.Size}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Total Price:</span>
+      <span class="value">{{.TotalPrice}}</span>
+    </div>
+    <div class="field">
+      <span class="label">NM ID:</span>
+      <span class="value">{{.NmId}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Brand:</span>
+      <span class="value">{{.Brand}}</span>
+    </div>
+    <div class="field">
+      <span class="label">Status:</span>
+      <span class="value">{{.Status}}</span>
+    </div>
+    {{end}}
+  </div>
+
+
+
+  <div class="field">
+    <span class="label">Locale:</span>
+    <span class="value">{{.Locale}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Internal Signature:</span>
+    <span class="value">{{.InternalSignature}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Customer ID:</span>
+    <span class="value">{{.CustomerId}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Delivery Service:</span>
+    <span class="value">{{.DeliveryService}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Shard Key:</span>
+    <span class="value">{{.Shardkey}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Sm ID:</span>
+    <span class="value">{{.SmId}}</span>
+  </div>
+
+
+
+  <div class="field">
+    <span class="label">Date Created:</span>
+    <span class="value">{{.DateCreated}}</span>
+  </div>
+
+
+  <div class="field">
+    <span class="label">Oof Shard:</span>
+    <span class="value">{{.OofShard}}</span>
+  </div>
+
+
+
+</div>
+</body>
+</html>
